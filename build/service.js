@@ -1,15 +1,15 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.countString = void 0;
 
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _lodash = _interopRequireDefault(require("lodash"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var countString = function countString(input) {
   input = input.toLowerCase();
@@ -35,7 +35,7 @@ var countCharacter = function countCharacter(input) {
   var result = _lodash["default"].sortedUniq(array);
 
   var countChar = function countChar(_char) {
-    return (0, _defineProperty2["default"])({}, "".concat(_char), input.match(new RegExp("".concat(_char), "g")).length);
+    return _defineProperty({}, "".concat(_char), input.match(new RegExp("".concat(_char), "g")).length);
   };
 
   return _lodash["default"].map(result, countChar);
