@@ -1,2 +1,4 @@
 node_modules
 .env
+package-lock 2.json
+package-lock.json
