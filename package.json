@@ -1,0 +1,23 @@
+{
+  "name": "dreamhealer",
+  "version": "1.0.0",
+  "description": "Assignment for logic ",
+  "main": "index.js",
+  "author": "Ashley",
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/runtime": "^7.11.2",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "babel-node index.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^26.4.2"
+  }
+}
