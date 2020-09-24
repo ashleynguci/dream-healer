@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyParser from "body-parser";
 import {healTheDream} from './controller';
-require('dotenv').config();
 
 const app = express()
 app.use(bodyParser.json());
