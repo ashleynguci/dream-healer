@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "12"
+  - 12
 cache: npm
 
 install:
@@ -8,7 +8,7 @@ install:
 
 script:
   - npm test
-  - npm run build
+  - npm run build:server
 
 deploy:
   provider: heroku 
