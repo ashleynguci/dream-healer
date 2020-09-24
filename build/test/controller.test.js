@@ -16,7 +16,7 @@ describe(' Controller', function () {
   });
   var request = (0, _mockHttp.mockRequest)();
   var response = (0, _mockHttp.mockResponse)();
-  test('it should return  ', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
+  test('it should be called ', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
