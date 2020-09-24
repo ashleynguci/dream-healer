@@ -6,7 +6,7 @@ describe(' Controller', () => {
   const request = mockRequest();
   const response = mockResponse();
 
-  test('it should return  ', async () => {
+  test('it should be called ', async () => {
     request.body = {'text':'hello world ! '};
     
     await healTheDream(request, response);

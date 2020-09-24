@@ -14,7 +14,7 @@ export const countString = (input) => {
   };
 };
 
-const countCharacter = (input) => {
+export const countCharacter = (input) => {
   const array = input.match(alphabet).sort();
   const result = _.sortedUniq(array);
   const countChar = (char) => {
