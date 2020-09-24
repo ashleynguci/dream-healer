@@ -10,4 +10,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU_KEY
+    secure: 
+env:
+  global:
+    secure: UoDKbYa0E7j1UE1HllssYaTPsolLX+/gdEoWRgUgIcB+li2x+miSUwjUsKkv1XBkuizsOSD9A55S69EI1/ONi6kl4pBZk3MJn4cPPDJCoZPCC0NlaFuk/9YaB8U2n6UmlFhyPtSnlAgZlFcmhge8fP9bo87Om8I0K/U8BWwcydzSEqS1/mTTcWo9qFnXd9cs0oeQmDcGK0ovUMrl1QhqvEfJBLW9P8T6t8KKEyp1I2RO/+9jgzeAWz6iiTwH7IYAEfFDdlt1tsKKdGR3Q4xpRopy64B+f+eSDypXhE5nUo70lr2UlmjG1z4t4HPo689d8xa6B249TntslGjJjCW22iC4uYcfaMB0noqBwBkwvu8+3bIidGuaXLgNKLHpwX/86rr9Yn0gaN12MG3P3lr8XDn3ULxgpqLgoZg3Ha4/tYH0LQ9J+eidhukw2/VUpsfrD5NWD9gLdzxY66midXEdyUR6ozWL0Lq16jvAu78X0posUPrnXpMDXqZJLYhoJ+3Cr9JensKG6fVyMhW/WKqzPzZucalJyIf2LyYZMXuY1VBc6qKLz+ETDb49i5ljq+Sj7U3ReUC1fhnRGLuxHvOXMVBA61ysruWRS0KsT64wIDI8IB2bHboZ3lhhyc0pFNf608gKK5qaGD78iJu/3GrcXSXu+VUolaRSxJtTugneZS8=
