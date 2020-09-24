@@ -10,6 +10,5 @@ const port = 3000
 app.post('/analyze', healTheDream);
 
 app.listen(port, () => {
-  console.log(process.env);
   console.log(`Example app listening at http://localhost:${port}`)
 }) 
