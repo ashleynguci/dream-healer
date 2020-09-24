@@ -12,7 +12,7 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "babel-node src/index.js",
     "test": "jest",
     "build:server": "babel src --out-dir build",
     "build": "npm run build:server"
