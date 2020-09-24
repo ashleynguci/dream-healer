@@ -13,7 +13,9 @@
   },
   "scripts": {
     "start": "babel-node index.js",
-    "test": "jest"
+    "test": "jest",
+    "build:server": "babel src --out-dir build",
+    "build": "npm run build:server"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.11.5",
