@@ -1,9 +1,9 @@
 import { countString, countCharacter } from "../service";
 
 describe(" test countString function", () => {
-  test("should return {'a':1}", () => {
-    const result = countString("run 2 2 world and see   2");
-    expect(result.characterCount[0]).toMatchObject({ a: 1 });
+  test("Test with trailing spaces", () => {
+    const result = countString(" trailing spaces...     ");
+    expect(result.textLength.withoutSpaces).toBe(17);
   });
 
   test("should count only alphabet in characterCount", () => {
@@ -16,15 +16,15 @@ describe(" test countString function", () => {
     expect(result.wordCount).toBe(5);
   });
 
-  test("should return [{ \"a\": 2 },{\"b\":2},{\"c\":2}]", () => {
-    const result = countString("abc#  ABC @@");
-    expect(result.characterCount).toStrictEqual([{ "a": 2 },{"b":2},{"c":2}]);
+  test("test empty text ", () => {
+    const result = countString("    ");
+    expect(result.characterCount).toStrictEqual([]);
   });
 });
 
 describe('countCharacter', () => {
-    test("should return [{ \"a\": 2 },{\"b\":2},{\"c\":3}]", () => {
-        const result = countCharacter("abc#  abcc @@");
-        expect(result).toStrictEqual([{ "a": 2 },{"b":2},{"c":3}]);
+    test("should return []", () => {
+        const result = countCharacter("7, 8");
+        expect(result).toStrictEqual([]);
       });
 })

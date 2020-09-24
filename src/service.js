@@ -1,11 +1,11 @@
 import _ from "lodash";
-import {nonSpace, spaceBetween, alphabet} from './constant';
+import { nonSpace, spaceBetween, alphabet } from "./constant";
 
 export const countString = (input) => {
-  input = input.toLowerCase();
   const withSpaces = input.length;
-  const withoutSpaces = input.match(nonSpace).length;
-  const wordCount = input.trim().split(spaceBetween).length;
+  input  = input.trim();
+  const withoutSpaces = input?input.match(nonSpace).length:0;
+  const wordCount = input?input.split(spaceBetween).length:0;
   const characterCount = countCharacter(input);
   return {
     textLength: { withSpaces, withoutSpaces },
@@ -15,10 +15,15 @@ export const countString = (input) => {
 };
 
 export const countCharacter = (input) => {
-  const array = input.match(alphabet).sort();
-  const result = _.sortedUniq(array);
-  const countChar = (char) => {
-    return { [`${char}`]: input.match(new RegExp(`${char}`, "g")).length };
-  };
-  return _.map(result, countChar);
+  const array = input.match(alphabet);
+  if (!array) {
+    return [];
+  } else {
+    input = input.toLowerCase();
+    const sortedChar = _.sortedUniq(array.sort());
+    const countChar = (char) => {
+      return { [`${char}`]: input.match(new RegExp(`${char}`, "g")).length };
+    };
+    return _.map(sortedChar, countChar);
+  }
 };
