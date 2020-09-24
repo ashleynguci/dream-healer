@@ -11,11 +11,13 @@ var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/de
 
 var _lodash = _interopRequireDefault(require("lodash"));
 
+var _constant = require("./constant");
+
 var countString = function countString(input) {
   input = input.toLowerCase();
   var withSpaces = input.length;
-  var withoutSpaces = input.match(/\S/g).length;
-  var wordCount = input.trim().split(/\s+/).length;
+  var withoutSpaces = input.match(_constant.nonSpace).length;
+  var wordCount = input.trim().split(_constant.spaceBetween).length;
   var characterCount = countCharacter(input);
   return {
     textLength: {
@@ -30,7 +32,7 @@ var countString = function countString(input) {
 exports.countString = countString;
 
 var countCharacter = function countCharacter(input) {
-  var array = input.match(/[a-z]/g).sort();
+  var array = input.match(_constant.alphabet).sort();
 
   var result = _lodash["default"].sortedUniq(array);
 
