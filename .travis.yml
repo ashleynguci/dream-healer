@@ -1,7 +1,8 @@
 language: node_js
 node_js:
 - 12.18.3
-cache: npm
+cache: 
+  npm:false
 install:
 - npm ci
 script:

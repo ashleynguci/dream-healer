@@ -36,17 +36,17 @@ var countCharacter = function countCharacter(input) {
 
   if (!array) {
     return [];
-  } else {
-    input = input.toLowerCase();
-
-    var sortedChar = _lodash["default"].sortedUniq(array.sort());
-
-    var countChar = function countChar(_char) {
-      return (0, _defineProperty2["default"])({}, "".concat(_char), input.match(new RegExp("".concat(_char), "g")).length);
-    };
-
-    return _lodash["default"].map(sortedChar, countChar);
   }
+
+  input = input.toLowerCase();
+
+  var sortedChar = _lodash["default"].sortedUniq(array.sort());
+
+  var countChar = function countChar(_char) {
+    return (0, _defineProperty2["default"])({}, "".concat(_char), input.match(new RegExp("".concat(_char), "g")).length);
+  };
+
+  return _lodash["default"].map(sortedChar, countChar);
 };
 
 exports.countCharacter = countCharacter;
