@@ -1,20 +1,13 @@
 language: node_js
 node_js:
-  - 12.18.3
+- 12.18.3
 cache: npm
-
 install:
-  - npm ci
-
+- npm ci
 script:
-  - npm test
-  - npm run build:server
-
+- npm test
+- npm run build:server
 deploy:
-  provider: heroku 
+  provider: heroku
   api_key:
-    secure: "tbtj0EMcRua8XF/6PhTTV3eJfi9Lw2VJ5HfPSiI508ntSsnIMah8RxGe8m2DCJ2Fh+zQ3fiGkDWLf5vLQGjGe+ojl9Sy34ih0wtVGvlrOOyLboScxQZ0rDLZzavlxNmAs/zyhw4NKgalC2Oa0y9178DUKyNWSTkghDEaDjkQbXCP6k2d0cNtSQGhft3JR7njvVZrvam8AJ3jZNibPtDa5QTe7ExofFNl22aSO0SljY9joEkBABPohMDCoHFJ4IS9O2lA/WMQT2CSOb+gUC/ks0q6PxzwoFlhyJ0K7HL/SaFSISSg9cgxYsSWDaPvaI9bPPhreMc8xMTM89AJV+DSQRuTXHwVVMit49JmrEzdIKhbXyzHY/9X/Y9oMBZhC+mIi2CiQVAZmkEloZCJBMaq91Jk76xkfgRTFlMXB7DNtQHRukJo5KGRP+C3GHqBcfialdQbMHZdMfiDA+GV0sGs6ywU08/Xh8QE6I7GzeXxWlwh0vvi+N/nhtOElcd/gaIPbW5tCK/XPVNSdoSvR9PS5EW67WuLwhP40q6tHtWhOQs4UAtamtCmhRO0Jbdv44Pv4vn46A0Ol8cWLoSQVXh+irWYsmYaD/7Qvf5U51z0MmoA7A2u8xrgc3IOwbkqwvgbz61s9dFENIMrb0nD531z+0uc/m4nk5ddX4sf/S4mpCs="
-    app: dream-healer
-    on:
-      repo: ashleynguci/dream-healer
-
+    secure: UF022D/WfR8UwIQEyJuOtlX5k+uj60hrAW3qwgDHmEPm5PuZc9iazz77RhGaFEoxyd79fJ70Fr11oglGJWvkYwHmcJOYF+x7igkJarVzDOmLnhEI2k8rl2N1MZrVO7bOPRt4C6Q/fwMrnwI4c9Son5jJcXayH+t5ugetFrRg1FbpDLuy2e2GqgK5TVs02vT2+b/Ca8CR728+8VZqNGPIEXKipTVnnkXQdQUJo1RlIlIVs8nc1fDbyrccO9lv+5I7AvKKLG3EpZ8mbcXgiHTp0I43BqtD2hBYJ5BhoIefF35CnDVmH/EJ6HTIMavgsy2bSgcRuw1+B5YpqEIAwAixW5QLKqzLuNK8HetB7KEoqqNZJrClXgYQYaJHMNLnbn03Isj7Q3mKZ5AYSEfshSwUXQYnFMSvDk5D5d0m9TrVTrd9hSmBgiAmryuquQllmMdWsqI9x599QHcRMyLP+guSWz0+kjSucllhcUhRBdJAtgFOXauOp28JwnfG/WOzv5IZEW3SLLjUh1DFgV1sX2/507ZDHtMgS7dqhITMq4vP0TSxSyTVj53vqK3gZaKwCYDbsKH67P0oYSo903AITWndzJ5x7Hlm4w6kotyrKUTO8zAVVrcxzTmOy66Q++3p1JtfN6L03s0V+Uqnd0+uPWFTOlC6FffLhFUdEDJ4iH+In3Y=
