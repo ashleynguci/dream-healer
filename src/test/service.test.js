@@ -22,9 +22,14 @@ describe(" test countString function", () => {
   });
 });
 
-describe('countCharacter', () => {
-    test("should return []", () => {
-        const result = countCharacter("7, 8");
-        expect(result).toStrictEqual([]);
-      });
-})
+describe("countCharacter", () => {
+  test("should return []", () => {
+    const result = countCharacter("7, 8");
+    expect(result).toStrictEqual([]);
+  });
+
+  test("test case capital character", () => {
+    const result = countCharacter("AAAbb ccCC");
+    expect(result).toStrictEqual([{ a: 3 }, { b: 2 }, { c: 4 }]);
+  });
+});

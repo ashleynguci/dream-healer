@@ -15,11 +15,11 @@ export const countString = (input) => {
 };
 
 export const countCharacter = (input) => {
+  input = input.toLowerCase();
   const array = input.match(alphabet);
   if (!array) {
     return [];
   } 
-    input = input.toLowerCase();
     const sortedChar = _.sortedUniq(array.sort());
     const countChar = (char) => {
       return { [`${char}`]: input.match(new RegExp(`${char}`, "g")).length };

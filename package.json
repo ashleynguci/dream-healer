@@ -4,6 +4,15 @@
   "description": "Assignment for logic ",
   "main": "index.js",
   "author": "Ashley",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "eslintIgnore": [
+    "*/test/*"
+  ],
   "dependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
